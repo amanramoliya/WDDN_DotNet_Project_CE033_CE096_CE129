@@ -1,0 +1,21 @@
+﻿.login_Outer {
+    background-color: ghostwhite;
+    color: #fff;
+    height: min-content;
+    width: 100%;
+    margin: 0px auto;
+}
+
+.Login_Inner {
+    background-color: #efefef;
+    padding: 20px;
+    color: #000;
+    font-weight: bold;
+    height: 100%;
+    width: fit-content;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+  
+}
+

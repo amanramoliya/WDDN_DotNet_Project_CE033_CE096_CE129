@@ -1,0 +1,408 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="forgotpass">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Uid" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReqDateTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="hobbies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="hobby" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="languages">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="language" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="projects">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="projectname" Type="nvarchar(max)" />
+          <Property Name="projectdetails" Type="nvarchar" MaxLength="50" />
+          <Property Name="projecturl" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="resumedatas">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="username" Type="nvarchar(max)" />
+          <Property Name="firstname" Type="nvarchar(max)" />
+          <Property Name="lastname" Type="nvarchar(max)" />
+          <Property Name="email" Type="nvarchar(max)" />
+          <Property Name="mobileno" Type="nvarchar" MaxLength="50" />
+          <Property Name="country" Type="nvarchar" MaxLength="50" />
+          <Property Name="state" Type="nvarchar" MaxLength="50" />
+          <Property Name="city" Type="nvarchar" MaxLength="50" />
+          <Property Name="address" Type="nvarchar(max)" />
+          <Property Name="zipcode" Type="nchar" MaxLength="10" />
+          <Property Name="maritalstatus" Type="nchar" MaxLength="10" />
+          <Property Name="gender" Type="nchar" MaxLength="10" />
+          <Property Name="birthdate" Type="datetime" />
+          <Property Name="ustate" Type="nvarchar" MaxLength="50" />
+          <Property Name="ucity" Type="nvarchar" MaxLength="50" />
+          <Property Name="school" Type="nvarchar(max)" />
+          <Property Name="university" Type="nvarchar(max)" />
+          <Property Name="qualification" Type="nvarchar(max)" />
+          <Property Name="branch" Type="nvarchar" MaxLength="50" />
+          <Property Name="passingyear" Type="datetime" />
+          <Property Name="cgpa" Type="nchar" MaxLength="10" />
+          <Property Name="currentstudy" Type="bit" />
+          <Property Name="jobtitle" Type="nvarchar(max)" />
+          <Property Name="employeer" Type="nvarchar(max)" />
+          <Property Name="wcity" Type="nvarchar" MaxLength="50" />
+          <Property Name="wstate" Type="nvarchar" MaxLength="50" />
+          <Property Name="startyear" Type="datetime" />
+          <Property Name="endyear" Type="datetime" />
+          <Property Name="currentjob" Type="bit" />
+          <Property Name="carrerobj" Type="nvarchar(max)" />
+          <Property Name="summary" Type="nvarchar(max)" />
+          <Property Name="imagepath" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="skills">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="username" Type="nvarchar" MaxLength="50" />
+          <Property Name="skill" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Username" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="MobileNo" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="Database1ModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="forgotpass" EntityType="Self.forgotpass" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="hobbies" EntityType="Self.hobbies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="languages" EntityType="Self.languages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="projects" EntityType="Self.projects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="resumedatas" EntityType="Self.resumedatas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="skills" EntityType="Self.skills" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+          <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="forgotpass">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Uid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReqDateTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="hobby">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="hobby1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="language">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="language1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="project">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="projectname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="projectdetails" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="projecturl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="resumedata">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="mobileno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="zipcode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="maritalstatus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="birthdate" Type="DateTime" Precision="3" />
+          <Property Name="ustate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ucity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="school" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="university" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="branch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="passingyear" Type="DateTime" Precision="3" />
+          <Property Name="cgpa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="currentstudy" Type="Boolean" />
+          <Property Name="jobtitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="employeer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="wcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="wstate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="startyear" Type="DateTime" Precision="3" />
+          <Property Name="endyear" Type="DateTime" Precision="3" />
+          <Property Name="currentjob" Type="Boolean" />
+          <Property Name="carrerobj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="imagepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="skill">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="skill1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User1">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Database1Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+          <EntitySet Name="forgotpasses" EntityType="Self.forgotpass" />
+          <EntitySet Name="hobbies" EntityType="Self.hobby" />
+          <EntitySet Name="languages" EntityType="Self.language" />
+          <EntitySet Name="projects" EntityType="Self.project" />
+          <EntitySet Name="resumedatas" EntityType="Self.resumedata" />
+          <EntitySet Name="skills" EntityType="Self.skill" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="Users1" EntityType="Self.User1" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities1">
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="Database1Model.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="forgotpasses">
+            <EntityTypeMapping TypeName="Database1Model.forgotpass">
+              <MappingFragment StoreEntitySet="forgotpass">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Uid" ColumnName="Uid" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ReqDateTime" ColumnName="ReqDateTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="hobbies">
+            <EntityTypeMapping TypeName="Database1Model.hobby">
+              <MappingFragment StoreEntitySet="hobbies">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="hobby1" ColumnName="hobby" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="languages">
+            <EntityTypeMapping TypeName="Database1Model.language">
+              <MappingFragment StoreEntitySet="languages">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="language1" ColumnName="language" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="projects">
+            <EntityTypeMapping TypeName="Database1Model.project">
+              <MappingFragment StoreEntitySet="projects">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="projectname" ColumnName="projectname" />
+                <ScalarProperty Name="projectdetails" ColumnName="projectdetails" />
+                <ScalarProperty Name="projecturl" ColumnName="projecturl" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="resumedatas">
+            <EntityTypeMapping TypeName="Database1Model.resumedata">
+              <MappingFragment StoreEntitySet="resumedatas">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="firstname" ColumnName="firstname" />
+                <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="city" ColumnName="city" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+                <ScalarProperty Name="maritalstatus" ColumnName="maritalstatus" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+                <ScalarProperty Name="ustate" ColumnName="ustate" />
+                <ScalarProperty Name="ucity" ColumnName="ucity" />
+                <ScalarProperty Name="school" ColumnName="school" />
+                <ScalarProperty Name="university" ColumnName="university" />
+                <ScalarProperty Name="qualification" ColumnName="qualification" />
+                <ScalarProperty Name="branch" ColumnName="branch" />
+                <ScalarProperty Name="passingyear" ColumnName="passingyear" />
+                <ScalarProperty Name="cgpa" ColumnName="cgpa" />
+                <ScalarProperty Name="currentstudy" ColumnName="currentstudy" />
+                <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+                <ScalarProperty Name="employeer" ColumnName="employeer" />
+                <ScalarProperty Name="wcity" ColumnName="wcity" />
+                <ScalarProperty Name="wstate" ColumnName="wstate" />
+                <ScalarProperty Name="startyear" ColumnName="startyear" />
+                <ScalarProperty Name="endyear" ColumnName="endyear" />
+                <ScalarProperty Name="currentjob" ColumnName="currentjob" />
+                <ScalarProperty Name="carrerobj" ColumnName="carrerobj" />
+                <ScalarProperty Name="summary" ColumnName="summary" />
+                <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="skills">
+            <EntityTypeMapping TypeName="Database1Model.skill">
+              <MappingFragment StoreEntitySet="skills">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="skill1" ColumnName="skill" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="Database1Model.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users1">
+            <EntityTypeMapping TypeName="Database1Model.User1">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

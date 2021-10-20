@@ -1,0 +1,39 @@
+﻿
+.login_Outer {
+    background-color: ghostwhite;
+    color: #fff;
+    height: min-content;
+    width: 100%;
+    margin: 0px auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.Login_Inner {
+    background-color: #efefef;
+    padding: 20px;
+    color: #000;
+    font-weight: bold;
+    height: 100%;
+    width: fit-content;
+    margin: 0px auto;
+    display: grid;
+    justify-content:center;
+    grid-auto-columns: min-content;
+}
+.Links {
+    text-align: center;
+    padding-top: 20px;
+    text-decoration: none;
+    color: dodgerblue;
+}
+.Links:hover{
+    transition:0.5s;
+    color:midnightblue;
+}
+
+.Button:hover{
+    transition:0.8s;
+    color:white;
+    background-color:dimgray;
+
+}

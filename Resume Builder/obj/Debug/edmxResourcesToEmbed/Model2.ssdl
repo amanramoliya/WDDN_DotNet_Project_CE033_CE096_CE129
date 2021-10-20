@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="forgotpass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Uid" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReqDateTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="hobbies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="hobby" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="languages">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="language" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="projects">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="projectname" Type="nvarchar(max)" />
+    <Property Name="projectdetails" Type="nvarchar" MaxLength="50" />
+    <Property Name="projecturl" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="resumedatas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nvarchar(max)" />
+    <Property Name="firstname" Type="nvarchar(max)" />
+    <Property Name="lastname" Type="nvarchar(max)" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="mobileno" Type="nvarchar" MaxLength="50" />
+    <Property Name="country" Type="nvarchar" MaxLength="50" />
+    <Property Name="state" Type="nvarchar" MaxLength="50" />
+    <Property Name="city" Type="nvarchar" MaxLength="50" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="zipcode" Type="nchar" MaxLength="10" />
+    <Property Name="maritalstatus" Type="nchar" MaxLength="10" />
+    <Property Name="gender" Type="nchar" MaxLength="10" />
+    <Property Name="birthdate" Type="datetime" />
+    <Property Name="ustate" Type="nvarchar" MaxLength="50" />
+    <Property Name="ucity" Type="nvarchar" MaxLength="50" />
+    <Property Name="school" Type="nvarchar(max)" />
+    <Property Name="university" Type="nvarchar(max)" />
+    <Property Name="qualification" Type="nvarchar(max)" />
+    <Property Name="branch" Type="nvarchar" MaxLength="50" />
+    <Property Name="passingyear" Type="datetime" />
+    <Property Name="cgpa" Type="nchar" MaxLength="10" />
+    <Property Name="currentstudy" Type="bit" />
+    <Property Name="jobtitle" Type="nvarchar(max)" />
+    <Property Name="employeer" Type="nvarchar(max)" />
+    <Property Name="wcity" Type="nvarchar" MaxLength="50" />
+    <Property Name="wstate" Type="nvarchar" MaxLength="50" />
+    <Property Name="startyear" Type="datetime" />
+    <Property Name="endyear" Type="datetime" />
+    <Property Name="currentjob" Type="bit" />
+    <Property Name="carrerobj" Type="nvarchar(max)" />
+    <Property Name="summary" Type="nvarchar(max)" />
+    <Property Name="imagepath" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="skills">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="username" Type="nvarchar" MaxLength="50" />
+    <Property Name="skill" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Username" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="MobileNo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="MobileNo" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="Database1ModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="forgotpass" EntityType="Self.forgotpass" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="hobbies" EntityType="Self.hobbies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="languages" EntityType="Self.languages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="projects" EntityType="Self.projects" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="resumedatas" EntityType="Self.resumedatas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="skills" EntityType="Self.skills" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

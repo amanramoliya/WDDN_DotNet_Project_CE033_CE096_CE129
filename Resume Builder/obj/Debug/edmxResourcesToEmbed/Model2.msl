@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Database1ModelStoreContainer" CdmEntityContainer="Database1Entities1">
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="Database1Model.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="forgotpasses">
+      <EntityTypeMapping TypeName="Database1Model.forgotpass">
+        <MappingFragment StoreEntitySet="forgotpass">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uid" ColumnName="Uid" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="ReqDateTime" ColumnName="ReqDateTime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hobbies">
+      <EntityTypeMapping TypeName="Database1Model.hobby">
+        <MappingFragment StoreEntitySet="hobbies">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="hobby1" ColumnName="hobby" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="languages">
+      <EntityTypeMapping TypeName="Database1Model.language">
+        <MappingFragment StoreEntitySet="languages">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="language1" ColumnName="language" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="projects">
+      <EntityTypeMapping TypeName="Database1Model.project">
+        <MappingFragment StoreEntitySet="projects">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="projectname" ColumnName="projectname" />
+          <ScalarProperty Name="projectdetails" ColumnName="projectdetails" />
+          <ScalarProperty Name="projecturl" ColumnName="projecturl" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="resumedatas">
+      <EntityTypeMapping TypeName="Database1Model.resumedata">
+        <MappingFragment StoreEntitySet="resumedatas">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mobileno" ColumnName="mobileno" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="city" ColumnName="city" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="zipcode" ColumnName="zipcode" />
+          <ScalarProperty Name="maritalstatus" ColumnName="maritalstatus" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="ustate" ColumnName="ustate" />
+          <ScalarProperty Name="ucity" ColumnName="ucity" />
+          <ScalarProperty Name="school" ColumnName="school" />
+          <ScalarProperty Name="university" ColumnName="university" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="branch" ColumnName="branch" />
+          <ScalarProperty Name="passingyear" ColumnName="passingyear" />
+          <ScalarProperty Name="cgpa" ColumnName="cgpa" />
+          <ScalarProperty Name="currentstudy" ColumnName="currentstudy" />
+          <ScalarProperty Name="jobtitle" ColumnName="jobtitle" />
+          <ScalarProperty Name="employeer" ColumnName="employeer" />
+          <ScalarProperty Name="wcity" ColumnName="wcity" />
+          <ScalarProperty Name="wstate" ColumnName="wstate" />
+          <ScalarProperty Name="startyear" ColumnName="startyear" />
+          <ScalarProperty Name="endyear" ColumnName="endyear" />
+          <ScalarProperty Name="currentjob" ColumnName="currentjob" />
+          <ScalarProperty Name="carrerobj" ColumnName="carrerobj" />
+          <ScalarProperty Name="summary" ColumnName="summary" />
+          <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="skills">
+      <EntityTypeMapping TypeName="Database1Model.skill">
+        <MappingFragment StoreEntitySet="skills">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="skill1" ColumnName="skill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Database1Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users1">
+      <EntityTypeMapping TypeName="Database1Model.User1">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="MobileNo" ColumnName="MobileNo" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

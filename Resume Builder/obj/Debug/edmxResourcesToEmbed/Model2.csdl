@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Database1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MigrationId" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ContextKey" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Model" Type="Binary" MaxLength="Max" FixedLength="false" Nullable="false" />
+    <Property Name="ProductVersion" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="forgotpass">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Uid" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ReqDateTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="hobby">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hobby1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="language">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="language1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="project">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="projectname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="projectdetails" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="projecturl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="resumedata">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="firstname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastname" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="mobileno" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="city" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="zipcode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="maritalstatus" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="birthdate" Type="DateTime" Precision="3" />
+    <Property Name="ustate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ucity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="school" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="university" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="qualification" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="branch" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="passingyear" Type="DateTime" Precision="3" />
+    <Property Name="cgpa" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="currentstudy" Type="Boolean" />
+    <Property Name="jobtitle" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="employeer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="wcity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="wstate" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="startyear" Type="DateTime" Precision="3" />
+    <Property Name="endyear" Type="DateTime" Precision="3" />
+    <Property Name="currentjob" Type="Boolean" />
+    <Property Name="carrerobj" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="summary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="imagepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="skill">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="skill1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User1">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Username" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MobileNo" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Database1Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
+    <EntitySet Name="forgotpasses" EntityType="Self.forgotpass" />
+    <EntitySet Name="hobbies" EntityType="Self.hobby" />
+    <EntitySet Name="languages" EntityType="Self.language" />
+    <EntitySet Name="projects" EntityType="Self.project" />
+    <EntitySet Name="resumedatas" EntityType="Self.resumedata" />
+    <EntitySet Name="skills" EntityType="Self.skill" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="Users1" EntityType="Self.User1" />
+  </EntityContainer>
+</Schema>
